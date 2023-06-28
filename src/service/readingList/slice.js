@@ -33,6 +33,7 @@ export const favouriteSlice = createSlice({
       .addCase(getReadingList.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+        toast.error("Sorry, we're maintaining our server. We'll keep you posted when our service is available")
       });
     builder
       .addCase(removeFromReading.pending, (state) => {

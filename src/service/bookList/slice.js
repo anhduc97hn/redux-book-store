@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import api from '../../apiService';
+import { toast } from "react-toastify";
 
 const fetchData = async ({pageNum, limit, query}) => {
     try {
